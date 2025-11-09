@@ -11,21 +11,24 @@
 }
 *{box-sizing:border-box}
 body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
-.site-header{
-  position:sticky;top:0;background:#fff;border-bottom:1px solid var(--border);z-index:10
-}
-.brand{
-  display:flex;gap:.6rem;align-items:center;max-width:1100px;margin:0 auto;padding:.5rem 1rem
-}
-.logo{width:48px;height:48px;object-fit:contain}
-.brand-text h1{margin:0;font-size:1.2rem}
-.brand-text .subtitle{font-size:.9rem;color:var(--muted);margin:.1rem 0}
-.brand .meta{color:var(--muted);font-size:.8rem}
-.nav{display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center;padding:.4rem .5rem .6rem}
-.nav a{padding:.3rem .6rem;border-radius:999px;text-decoration:none;color:#0f172a;font-size:.9rem;border:1px solid transparent}
+.site-header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--border);z-index:10}
+.brand{display:flex;gap:.6rem;align-items:center;max-width:1100px;margin:0 auto;padding:.4rem .8rem}
+.logo{width:40px;height:40px;object-fit:contain}
+.brand-text h1{margin:0;font-size:1.15rem;line-height:1.2}
+.brand-text .subtitle{font-size:.9rem;color:var(--muted);margin:.05rem 0 0}
+.nav{display:flex;gap:.35rem;flex-wrap:wrap;justify-content:center;padding:.35rem .5rem .5rem}
+.nav a{padding:.22rem .5rem;border-radius:999px;text-decoration:none;color:#0f172a;font-size:.9rem;line-height:1;border:1px solid transparent}
 .nav a:hover{border-color:var(--border);background:var(--card)}
+@media (max-width:600px){
+  .brand{padding:.35rem .6rem}
+  .logo{width:32px;height:32px}
+  .brand-text h1{font-size:1.02rem}
+  .brand-text .subtitle{font-size:.82rem}
+  .nav{gap:.25rem;padding:.25rem .4rem .35rem}
+  .nav a{font-size:.85rem;padding:.18rem .4rem}
+}
 
-.section{max-width:1100px;margin:0 auto;padding:1.5rem 1rem}
+.section{max-width:1100px;margin:0 auto;padding:1.25rem 1rem}
 .hero{background:linear-gradient(180deg,#ffffff, #f7f9ff)}
 .hero blockquote{margin:1rem 0;padding:1rem;border-left:4px solid var(--primary);background:var(--card);border-radius:var(--radius)}
 .btn{display:inline-block;background:var(--primary);color:#fff;padding:.7rem 1rem;border-radius:12px;text-decoration:none;border:1px solid var(--primary-600)}
@@ -53,12 +56,12 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvet
 }}
 
 
-.menu-toggle{display:none;margin:0 .75rem .5rem auto;background:#fff;border:1px solid var(--border);border-radius:12px;padding:.4rem .6rem;font-size:.95rem}
+
 
   .logo{width:40px;height:40px}
   .brand-text h1{font-size:1.05rem}
   .brand-text .subtitle,.brand .meta{display:none}
-  .menu-toggle{display:inline-block}
+  
   .nav{display:block;padding:0;margin:0 .75rem .5rem;border:1px solid var(--border);border-radius:12px;overflow:hidden;max-height:0;transition:max-height .25s ease}
   .nav.open{max-height:380px}
   .nav a{display:block;padding:.6rem .8rem;border-top:1px solid var(--border);font-size:.95rem}
@@ -68,12 +71,11 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvet
 }
 
 
-@media (max-width:768px){
-  .brand{padding:.35rem .8rem}
+
   .logo{display:none}
   .brand-text h1{font-size:1.02rem}
   .brand-text .subtitle,.brand .meta{display:none}
-  .menu-toggle{display:inline-block;margin:.4rem 0 .25rem .75rem}
+  
   /* Nav hidden by default on mobile */
   .nav{display:none;margin:.4rem .75rem;border:1px solid var(--border);border-radius:12px;overflow:hidden}
   .nav.open{display:block}
